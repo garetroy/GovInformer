@@ -1,0 +1,6 @@
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer\obj\Debug\netcoreapp5\GovInformer.csprojAssemblyReference.cache
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer\obj\Debug\netcoreapp5\GovInformer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer\obj\Debug\netcoreapp5\GovInformer.AssemblyInfoInputs.cache
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer\obj\Debug\netcoreapp5\GovInformer.AssemblyInfo.cs
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer\obj\Debug\netcoreapp5\GovInformer.csproj.CoreCompileInputs.cache
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer\obj\Debug\netcoreapp5\GovInformer.MvcApplicationPartsAssemblyInfo.cache

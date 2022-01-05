@@ -1,0 +1,9 @@
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\bin\Debug\netstandard2.1\GovInformer.Models.deps.json
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\bin\Debug\netstandard2.1\GovInformer.Models.dll
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\bin\Debug\netstandard2.1\GovInformer.Models.pdb
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\obj\Debug\netstandard2.1\GovInformer.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\obj\Debug\netstandard2.1\GovInformer.Models.AssemblyInfoInputs.cache
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\obj\Debug\netstandard2.1\GovInformer.Models.AssemblyInfo.cs
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\obj\Debug\netstandard2.1\GovInformer.Models.csproj.CoreCompileInputs.cache
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\obj\Debug\netstandard2.1\GovInformer.Models.dll
+C:\Users\Windy\Projects\GovInformer\Backend\GovInformer\GovInformer.Models\obj\Debug\netstandard2.1\GovInformer.Models.pdb

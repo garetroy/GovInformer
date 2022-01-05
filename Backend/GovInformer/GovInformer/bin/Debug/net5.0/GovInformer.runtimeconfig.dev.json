@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Windy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Windy\\.nuget\\packages"
+    ]
+  }
+}

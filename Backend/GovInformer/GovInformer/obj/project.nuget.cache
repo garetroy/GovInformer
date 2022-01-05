@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mbSgEwnGHByKCx6IuJ0DKnwYWhn3rBV2UN1DbAaAw8pR+lq/EJXgufUzRJLTWznbLLQ3XE4Dw9TjnrO+lNguDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer\\GovInformer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Windy\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

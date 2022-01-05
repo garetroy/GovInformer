@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer\\GovInformer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Application\\GovInformer.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Application\\GovInformer.Application.csproj",
+        "projectName": "GovInformer.Application",
+        "projectPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Application\\GovInformer.Application.csproj",
+        "packagesPath": "C:\\Users\\Windy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Models\\GovInformer.Models.csproj": {
+                "projectPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Models\\GovInformer.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Models\\GovInformer.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Models\\GovInformer.Models.csproj",
+        "projectName": "GovInformer.Models",
+        "projectPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Models\\GovInformer.Models.csproj",
+        "packagesPath": "C:\\Users\\Windy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer\\GovInformer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer\\GovInformer.csproj",
+        "projectName": "GovInformer",
+        "projectPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer\\GovInformer.csproj",
+        "packagesPath": "C:\\Users\\Windy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Application\\GovInformer.Application.csproj": {
+                "projectPath": "C:\\Users\\Windy\\Projects\\GovInformer\\Backend\\GovInformer\\GovInformer.Application\\GovInformer.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
