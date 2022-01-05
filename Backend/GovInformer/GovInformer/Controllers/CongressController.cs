@@ -66,5 +66,25 @@ namespace GovInformer.Controllers
                 YearsOfRepresentativeExperience = senator.YearsOfRepresentativeExperience.ToString(),
             }));
         }
+
+        [HttpGet]
+        [Route("Committees")]
+        public async Task<string> Committees()
+        {
+            var temp = await new CongressGatherer().GatherAllCommittees();
+
+            return JsonSerializer.Serialize(temp.Select(comm => new
+            {
+                CongressionalOwnership = comm.CongressType.ToString(),
+                comm.ID,
+                comm.Name,
+                comm.Jurisdiction,
+                comm.Website,
+                comm.MinorityWebsite,
+                comm.SubCommittees,
+                comm.Address,
+                comm.PhoneNumber
+            }));
+        }
     }
 }

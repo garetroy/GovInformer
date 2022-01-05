@@ -16,6 +16,15 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
             });
         }
 
+        public async Task<List<Committee>> GetAllCurrentCommittees()
+        {
+            return await Get(CurrentCommitteesUrl, async streamReader =>
+            {
+                return await JsonSerializer.DeserializeAsync<List<Committee>>(streamReader);
+            });
+        }
+
         private readonly string CurrentLegislatorUrl = "https://theunitedstates.io/congress-legislators/legislators-current.json";
+        private readonly string CurrentCommitteesUrl = "https://theunitedstates.io/congress-legislators/committees-current.json";
     }
 }

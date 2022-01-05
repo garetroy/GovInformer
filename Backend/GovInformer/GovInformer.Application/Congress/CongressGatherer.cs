@@ -60,5 +60,35 @@ namespace GovInformer.Application.Congress
                     }
                 ).Where(leg => leg.CongressType == CongressType.Representative).ToList();
         }
+
+        public async Task<List<Models.Congress.Committees.Committee>> GatherAllCommittees()
+        {
+            var result = await new TheUnitedStatesIOAdapter().GetAllCurrentCommittees();
+
+            var commitees = new List<Models.Congress.Committees.Committee>();
+
+
+            return
+                result.Select(comm =>
+                    new Models.Congress.Committees.Committee
+                    {
+                        ID = comm.ID,
+                        CongressType = CongressType.Parse(comm.CongressType),
+                        Name = comm.Name,
+                        Website = comm.Website,
+                        MinorityWebsite = comm.MinorityWebsite,
+                        Jurisdiction = comm.Jurisdiction,
+                        PhoneNumber = comm.PhoneNumber,
+                        Address = comm.Address,
+                        SubCommittees = comm.SubCommittees?.Select(scomm => new Models.Congress.Committees.SubCommittees
+                        {
+                            ID = scomm.ID,
+                            Address = scomm.Address,
+                            Phone = scomm.PhoneNumber,
+                            Name = scomm.Name,
+                        }).ToList()
+                    }
+                ).ToList();
+        }
     }
 }
