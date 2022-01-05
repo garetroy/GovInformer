@@ -5,21 +5,17 @@ using System.Xml.Serialization;
 
 namespace GovInformer.Application.Adapters.SenateGov
 {
-    internal sealed class SenateGovAdapter
+    internal sealed class SenateGovAdapter : BaseAdapter
     {
         public async Task<SenateGovResponse> GetAllSenators()
         {
             var url = "https://www.senate.gov/general/contact_information/senators_cfm.xml";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
-            using (HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
+            return await Get(url, streamReader =>
             {
                 var serializer = new XmlSerializer(typeof(SenateGovResponse));
-                return (SenateGovResponse)serializer.Deserialize(reader);
-            }
+                return Task.FromResult((SenateGovResponse)serializer.Deserialize(streamReader));
+            });
         }
     }
 }
