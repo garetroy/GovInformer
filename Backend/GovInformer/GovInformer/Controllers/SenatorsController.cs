@@ -26,12 +26,13 @@ namespace GovInformer.Controllers
         {
             var temp = await new SenatorGatherer().GatherAllSenators();
 
-            return JsonSerializer.Serialize(temp.Senators.Select(senator => new
+            return JsonSerializer.Serialize(temp.Legislators.Select(senator => new
             {
                 FullName = senator.FirstName + " " + senator.LastName,
                 Party = senator.PoliticalParty.ToString(),
                 StateTerritory = senator.StateTerritory.ToString(),
-                SenatorId = senator.SenatorId
+                CongressType = senator.CongressType.ToString(),
+                GoveTrackID = senator.GovTrackID
             }));
         }
     }

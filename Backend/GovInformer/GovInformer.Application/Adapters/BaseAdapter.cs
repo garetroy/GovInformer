@@ -7,17 +7,14 @@ namespace GovInformer.Application.Adapters
 {
     internal class BaseAdapter
     {
-        protected async Task<T> Get<T>(string url, Func<StreamReader, Task<T>> processFunc)
+        protected async Task<T> Get<T>(string url, Func<Stream, Task<T>> processFunc)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
-            using (HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                return await processFunc(reader);
-            }
+            using HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync();
+            using Stream stream = response.GetResponseStream();
+            return await processFunc(stream);
         }
     }
 }

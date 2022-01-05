@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GovInformer.Models.Senators
+namespace GovInformer.Models.Congress.Senators
 {
     public sealed record Senator
     {

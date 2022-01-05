@@ -11,11 +11,12 @@ namespace GovInformer.Application.Adapters.SenateGov
         {
             var url = "https://www.senate.gov/general/contact_information/senators_cfm.xml";
 
-            return await Get(url, streamReader =>
-            {
-                var serializer = new XmlSerializer(typeof(SenateGovResponse));
-                return Task.FromResult((SenateGovResponse)serializer.Deserialize(streamReader));
-            });
+            return await Get(url, stream =>
+           {
+               using StreamReader reader = new StreamReader(stream);
+               var serializer = new XmlSerializer(typeof(SenateGovResponse));
+               return Task.FromResult((SenateGovResponse)serializer.Deserialize(reader));
+           });
         }
     }
 }

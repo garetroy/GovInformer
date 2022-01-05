@@ -1,7 +1,7 @@
 ﻿using GovInformer.Models.Common;
 using System.Collections.Generic;
 
-namespace GovInformer.Models.Senators
+namespace GovInformer.Models.Congress.Senators
 {
     public sealed record GatheredSenators
     {

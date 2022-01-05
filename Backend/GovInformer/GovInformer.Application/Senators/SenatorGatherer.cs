@@ -1,34 +1,31 @@
-﻿using GovInformer.Application.Adapters.SenateGov;
+﻿using GovInformer.Application.Adapters.TheUnitedStatesIO;
 using GovInformer.Models.Common;
-using GovInformer.Models.Senators;
-using System;
-using System.Collections.Generic;
+using GovInformer.Models.Congress;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GovInformer.Application.Senators
 {
     public sealed class SenatorGatherer
     {
-        public async Task<GatheredSenators> GatherAllSenators()
+        public async Task<GatheredLegisators> GatherAllSenators()
         {
-            var result = await new SenateGovAdapter().GetAllSenators();
+            var result = await new TheUnitedStatesIOAdapter().GetAllCurrentLegislators();
 
-            var senators = new List<Senator>();
-            foreach (var senator in result.Senators)
+            return new GatheredLegisators
             {
-                senators.Add(new Senator
-                {
-                    FirstName = senator.FirstName,
-                    LastName = senator.LastName,
-                    PoliticalParty = PoliticalParty.Parse(senator.Party.Length == 1 ? senator.Party[0] : '\0'),
-                    StateTerritory = StateTerritory.Parse(senator.State),
-                    SenatorId = senator.SenatorId
-                });
-            }
-
-            return new GatheredSenators(senators);
+                Legislators = result.Select(leg =>
+                    new Models.Congress.Legislator
+                    {
+                        FirstName = leg.Name.FirstName,
+                        LastName = leg.Name.LastName,
+                        CongressType = CongressType.Parse(leg.Terms.Last().CongressType),
+                        PoliticalParty = PoliticalParty.Parse(leg.Terms.Last().PoliticalParty),
+                        StateTerritory = StateTerritory.Parse(leg.Terms.Last().StateTerritory),
+                        GovTrackID = leg.IDs.GovTrackID.ToString()
+                    }
+                ).Where(leg => leg.CongressType == CongressType.Senator).ToList()
+            };
         }
     }
 }

@@ -14,5 +14,9 @@
 		<ProjectReference Include="..\GovInformer.Application\GovInformer.Application.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Dtos\" />
+	</ItemGroup>
+
 
 </Project>
