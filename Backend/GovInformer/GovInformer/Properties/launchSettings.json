@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/senators",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/congress/senators",
       "publishAllPorts": true,
       "useSSL": true
     }
