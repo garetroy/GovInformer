@@ -48,7 +48,7 @@ namespace GovInformer.Controllers
         [Route("Representatives")]
         public async Task<string> Representatives()
         {
-            var temp = await new CongressGatherer().GatherAllRepresentatives();
+            var temp = await new CongressGatherer().GatherCommitteeMembershipForLegislators();
 
             return JsonSerializer.Serialize(temp.Select(senator => new
             {
@@ -64,6 +64,7 @@ namespace GovInformer.Controllers
                 TermStart = senator.TermStart.ToString("MM/dd/yyyyy"),
                 TermEnd = senator.TermEnd.ToString("MM/dd/yyyy"),
                 YearsOfRepresentativeExperience = senator.YearsOfRepresentativeExperience.ToString(),
+                senator.Committees,
             }));
         }
 
@@ -86,5 +87,6 @@ namespace GovInformer.Controllers
                 comm.PhoneNumber
             }));
         }
+
     }
 }

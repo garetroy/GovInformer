@@ -60,6 +60,9 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
     {
         [JsonPropertyName("govtrack")]
         public int GovTrackID { get; set; }
+
+        [JsonPropertyName("bioguide")]
+        public string BioGuideID { get; set; }
     }
 
     public sealed record Legislator

@@ -10,5 +10,8 @@ namespace GovInformer.Models.Congress.Committees
         public string Name { get; init; }
         public string Address { get; init; }
         public string Phone { get; init; }
+
+        /* For Legeslator Model */
+        public int CommitteeRank { get; init; }
     }
 }

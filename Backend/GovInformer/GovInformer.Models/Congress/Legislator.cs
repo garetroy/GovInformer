@@ -1,11 +1,14 @@
 ﻿using GovInformer.Models.Common;
+using GovInformer.Models.Congress.Committees;
 using System;
+using System.Collections.Generic;
 
 namespace GovInformer.Models.Congress
 {
     public record Legislator
     {
         public string GovTrackID { get; init; }
+        public string BioGuideID { get; init; }
         public string FirstName { get; init; }
         public string LastName { get; init; }
         public DateTime Birthday { get; init; }
@@ -19,5 +22,6 @@ namespace GovInformer.Models.Congress
         public int YearsOfExperience { get; init; }
         public int YearsOfRepresentativeExperience { get; init; }
         public int YearsOfSenatorExperience { get; init; }
+        public List<Committee> Committees { get; init; }
     }
 }

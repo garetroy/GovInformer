@@ -1,6 +1,5 @@
-﻿using System;
+﻿using GovInformer.Models.Common;
 using System.Collections.Generic;
-using System.Text;
 
 namespace GovInformer.Models.Congress.Committees
 {
@@ -8,6 +7,7 @@ namespace GovInformer.Models.Congress.Committees
     {
         public string ID { get; init; }
         public CongressType CongressType { get; init; }
+        public PoliticalParty RulingMajority { get; init; }
         public string Name { get; init; }
         public string Website { get; init; }
         public string MinorityWebsite { get; init; }
@@ -15,5 +15,8 @@ namespace GovInformer.Models.Congress.Committees
         public string PhoneNumber { get; init; }
         public string Address { get; init; }
         public List<SubCommittees> SubCommittees { get; init; }
+
+        /* For Legeslator Model */
+        public int CommitteeRank { get; init; }
     }
 }
