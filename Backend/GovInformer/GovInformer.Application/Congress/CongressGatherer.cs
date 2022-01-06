@@ -142,7 +142,6 @@ namespace GovInformer.Application.Congress
             });
         }
 
-
         private async Task<Dictionary<string, Committee>> GatherAllCommitteesDict()
         {
             return await Gather(System.Reflection.MethodBase.GetCurrentMethod().Name, async () =>
@@ -172,7 +171,6 @@ namespace GovInformer.Application.Congress
                     ).ToDictionary(comm => comm.ID);
             });
         }
-
 
         private async Task GatherCommitteeMembershipForLegislators<T>(Dictionary<string, T> legislators) where T : Legislator
         {
