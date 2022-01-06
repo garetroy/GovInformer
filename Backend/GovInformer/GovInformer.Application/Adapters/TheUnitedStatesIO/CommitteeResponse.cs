@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace GovInformer.Application.Adapters.TheUnitedStatesIO
 {
-    public sealed record SubCommittee
+    internal sealed record SubCommitteeDto
     {
         [JsonPropertyName("name")]
         public string Name { get; set; }
@@ -20,7 +20,7 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
         public string ID { get; set; }
     }
 
-    public sealed record Committee
+    internal sealed record CommitteeDto
     {
         [JsonPropertyName("thomas_id")]
         public string ID { get; set; }
@@ -53,6 +53,6 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
         public string YoutubeId { get; set; }
 
         [JsonPropertyName("subcommittees")]
-        public List<SubCommittee> SubCommittees { get; set; }
+        public List<SubCommitteeDto> SubCommittees { get; set; }
     }
 }

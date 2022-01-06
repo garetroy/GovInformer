@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
 
 namespace GovInformer.Application.Adapters.TheUnitedStatesIO
 {
-    public sealed record Term
+    internal sealed record Term
     {
         // Representative or Senator
         [JsonPropertyName("type")]
@@ -38,7 +37,7 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
         public int SenatorClass { get; set; }
     }
 
-    public sealed record Bio
+    internal sealed record Bio
     {
         [JsonPropertyName("birthday")]
         public DateTime Birthday { get; set; }
@@ -47,7 +46,7 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
         public string Gender { get; set; }
     }
 
-    public sealed record Name
+    internal sealed record Name
     {
         [JsonPropertyName("first")]
         public string FirstName { get; set; }
@@ -56,7 +55,7 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
         public string LastName { get; set; }
     }
 
-    public sealed record ID
+    internal sealed record ID
     {
         [JsonPropertyName("govtrack")]
         public int GovTrackID { get; set; }
@@ -65,7 +64,7 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
         public string BioGuideID { get; set; }
     }
 
-    public sealed record Legislator
+    internal sealed record LegislatorDto
     {
         [JsonPropertyName("id")]
         public ID IDs { get; set; }

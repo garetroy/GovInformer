@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace GovInformer.Application.Adapters.TheUnitedStatesIO
 {
-    public sealed record CommitteeMembership
+    internal sealed record CommitteeMembershipDto
     {
         [JsonPropertyName("name")]
         public string MemberName { get; set; }

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace GovInformer.Models.Congress.Committees
 {
-    public sealed class CommitteeMembership
+    public sealed record CommitteeMembership
     {
-        public string MemberName { get; set; }
-        public string MajorityOrMinority { get; set; }
-        public int CommitteeRank { get; set; }
-        public string BioGuideID { get; set; }
+        public string MemberName { get; init; }
+        public bool Majority { get; init; }
+        public int CommitteeRank { get; init; }
+        public string BioGuideID { get; init; }
     }
 }

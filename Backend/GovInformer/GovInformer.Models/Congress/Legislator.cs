@@ -22,6 +22,6 @@ namespace GovInformer.Models.Congress
         public int YearsOfExperience { get; init; }
         public int YearsOfRepresentativeExperience { get; init; }
         public int YearsOfSenatorExperience { get; init; }
-        public List<Committee> Committees { get; init; }
+        public HashSet<Committee> Committees { get; set; }
     }
 }

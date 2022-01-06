@@ -38,7 +38,7 @@ namespace GovInformer.Controllers
                 Party = senator.PoliticalParty.ToString(),
                 StateTerritory = senator.StateTerritory.ToString(),
                 SenateClass = senator.SenateClass.ToString(),
-                TermStart = senator.TermStart.ToString("MM/dd/yyyyy"),
+                TermStart = senator.TermStart.ToString("MM/dd/yyyy"),
                 TermEnd = senator.TermEnd.ToString("MM/dd/yyyy"),
                 YearsOfSenatorExperience = senator.YearsOfSenatorExperience.ToString(),
             }));
@@ -48,7 +48,7 @@ namespace GovInformer.Controllers
         [Route("Representatives")]
         public async Task<string> Representatives()
         {
-            var temp = await new CongressGatherer().GatherCommitteeMembershipForLegislators();
+            var temp = await new CongressGatherer().GatherAllRepresentatives();
 
             return JsonSerializer.Serialize(temp.Select(senator => new
             {
@@ -61,7 +61,7 @@ namespace GovInformer.Controllers
                 Party = senator.PoliticalParty.ToString(),
                 StateTerritory = senator.StateTerritory.ToString(),
                 District = senator.District.ToString(),
-                TermStart = senator.TermStart.ToString("MM/dd/yyyyy"),
+                TermStart = senator.TermStart.ToString("MM/dd/yyyy"),
                 TermEnd = senator.TermEnd.ToString("MM/dd/yyyy"),
                 YearsOfRepresentativeExperience = senator.YearsOfRepresentativeExperience.ToString(),
                 senator.Committees,
@@ -88,5 +88,13 @@ namespace GovInformer.Controllers
             }));
         }
 
+        [HttpGet]
+        [Route("CommitteeMembership")]
+        public async Task<string> CommitteMembership()
+        {
+            var temp = await new CongressGatherer().GatherAllCommitteeMembership();
+
+            return JsonSerializer.Serialize(temp);
+        }
     }
 }

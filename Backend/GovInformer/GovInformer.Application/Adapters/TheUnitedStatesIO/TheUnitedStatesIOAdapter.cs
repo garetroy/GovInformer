@@ -8,27 +8,27 @@ namespace GovInformer.Application.Adapters.TheUnitedStatesIO
 {
     internal sealed class TheUnitedStatesIOAdapter : BaseAdapter
     {
-        public async Task<List<Legislator>> GetAllCurrentLegislators()
+        public async Task<List<LegislatorDto>> GetAllCurrentLegislators()
         {
             return await Get(CurrentLegislatorUrl, async streamReader =>
             {
-                return await JsonSerializer.DeserializeAsync<List<Legislator>>(streamReader);
+                return await JsonSerializer.DeserializeAsync<List<LegislatorDto>>(streamReader);
             });
         }
 
-        public async Task<List<Committee>> GetAllCurrentCommittees()
+        public async Task<List<CommitteeDto>> GetAllCurrentCommittees()
         {
             return await Get(CurrentCommitteesUrl, async streamReader =>
             {
-                return await JsonSerializer.DeserializeAsync<List<Committee>>(streamReader);
+                return await JsonSerializer.DeserializeAsync<List<CommitteeDto>>(streamReader);
             });
         }
 
-        public async Task<Dictionary<string, List<CommitteeMembership>>> GetAllCurrentCommitteeMembership()
+        public async Task<Dictionary<string, List<CommitteeMembershipDto>>> GetAllCurrentCommitteeMembership()
         {
             return await Get(CurrentCommitteeMembershipUrl, async streamReader =>
             {
-                return await JsonSerializer.DeserializeAsync<Dictionary<string, List<CommitteeMembership>>>(streamReader);
+                return await JsonSerializer.DeserializeAsync<Dictionary<string, List<CommitteeMembershipDto>>>(streamReader);
             });
         }
 
